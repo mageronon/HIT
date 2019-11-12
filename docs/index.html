@@ -33,20 +33,21 @@
     </header>
 
     <div class="wrapper" id="goodsAPI">
-      <div class="list-group-inline row" id="list-tab" role="tablist" >
-        <a class="list-group-item list-group-item-action col m-2 text-center active "
+      <div class="list-group list-group-horizontal row" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action m-2 col text-center active "
            id="list-all-list" data-toggle="list" href="#list-all"
            style="max-width: 19rem; min-width: 19rem;"
           role="tab" aria-controls="all">All
         </a>
-        <a v-for="item in category_list" v-bind:class="'list-group-item list-group-item-action col m-2 text-center ' + item.activeted "
+        <a v-for="item in category_list" v-bind:class="'list-group-item list-group-item-action m-2 col text-center ' + item.activeted "
            v-bind:id="'list-' + item.name + '-list'" data-toggle="list" v-bind:href="'#list-' + item.name"
            style="max-width: 19rem; min-width: 19rem;"
           role="tab" v-bind:aria-controls="item.name">{{item.name}}
         </a>
       </div>
 
-      <div class="tab-content w-80 mt-5" style="margin-bottom: 100px; position:absolute">
+      <div class="tab-content w-80 mt-5"
+        style="margin-bottom: 100px; ">
         <div class="tab-pane fadeshow active" id="list-all"
           role="tabpanel" aria-labelledby="list-all-list">
           <div v-for="goods in goods_list" class="card m-2 float-left" v-bind:id="goods.id" style="width: 18rem;">
@@ -85,7 +86,6 @@
           </div>
         </div>
       </div>
-
 
       <footer class="columns">
         <div class="left-column">
