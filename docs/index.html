@@ -16,16 +16,15 @@
               <img src="http://orbisagro.com.ua/images/logo.png?123123" class="d-inline-block align-top" alt="">
             </a>
           </li>
-          <li class="nav-item"><a class="nav-link display-4" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link display-4" href="#">Store</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Store</a></li>
         </ul>
         <ul class="navbar-nav navbar-right">
          <li class="nav-item">
-           <button class="btn aml-auto order-lg-last display-4" id="open_trash">
+           <button class="btn aml-auto order-lg-last " id="open_trash">
              <i class="fa fa-trash" style="font-size:36px; color:#08F; padding-top:18px" id="count_of_shop_items">{{counter}}</i>
            </button>
          </li>
-         <li class="nav-item"><a class="nav-link display-4" href="#">Call</a></li>
         </ul>
       </nav>
       <h3>
@@ -34,13 +33,15 @@
     </header>
 
     <div class="wrapper" id="goodsAPI">
-      <div class="list-group flex-row" id="list-tab" role="tablist" >
-        <a class="list-group-item list-group-item-action d-inline-flex mr-2  active "
+      <div class="list-group-inline row" id="list-tab" role="tablist" >
+        <a class="list-group-item list-group-item-action col m-2 text-center active "
            id="list-all-list" data-toggle="list" href="#list-all"
+           style="max-width: 19rem; min-width: 19rem;"
           role="tab" aria-controls="all">All
         </a>
-        <a v-for="item in category_list" v-bind:class="'list-group-item list-group-item-action d-inline-flex mr-2 ' + item.activeted "
+        <a v-for="item in category_list" v-bind:class="'list-group-item list-group-item-action col m-2 text-center ' + item.activeted "
            v-bind:id="'list-' + item.name + '-list'" data-toggle="list" v-bind:href="'#list-' + item.name"
+           style="max-width: 19rem; min-width: 19rem;"
           role="tab" v-bind:aria-controls="item.name">{{item.name}}
         </a>
       </div>
