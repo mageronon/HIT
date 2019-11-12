@@ -41,7 +41,7 @@
         <div class="list-group d-inline mx-auto" id="list-tab" role="tablist" >
           <a v-for="item in goods_list" v-bind:class="'list-group-item list-group-item-action d-inline p-4 mr-2 ' + item.activeted "
              v-bind:id="'list-' + item.name + '-list'" data-toggle="list" v-bind:href="'#list-' + item.name"
-            role="tab" v-bind:aria-controls="item.name">{{item.name_ukr}}
+            role="tab" v-bind:aria-controls="item.name">{{item.name}}
           </a>
         </div>
         <div class="tab-content w-100 mt-5">
