@@ -40,9 +40,10 @@
           role="tab" aria-controls="all">All
         </a>
         <a v-for="item in category_list" v-bind:class="'list-group-item list-group-item-action m-2 col text-center ' + item.activeted "
-           v-bind:id="'list-' + item.name + '-list'" data-toggle="list" v-bind:href="'#list-' + item.name"
+           v-bind:id="'list-' + item.id + '-list'" data-toggle="list" v-bind:href="'#list-' + item.id"
            style="max-width: 19rem; min-width: 19rem;"
-          role="tab" v-bind:aria-controls="item.name">{{item.name}}
+          role="tab" v-bind:aria-controls="item.id">
+          {{item.name}}
         </a>
       </div>
 
@@ -66,8 +67,8 @@
           </div>
         </div>
 
-        <div v-for="item in category_list" class="tab-pane fade" v-bind:id="'list-' + item.name"
-          role="tabpanel" v-bind:aria-labelledby="'list-' + item.name + '-list'">
+        <div v-for="item in category_list" class="tab-pane fade" v-bind:id="'list-' + item.id"
+          role="tabpanel" v-bind:aria-labelledby="'list-' + item.id + '-list'">
           <div v-for="solo in goods_by_category" v-if="item.id == solo.id">
             <div v-for="goods in solo.data" class="card m-2 float-left" v-bind:id="goods.id" style="width: 18rem;">
               <img class="card-img-top min-vw-50" style="height:280px;" v-bind:src="goods.image_url" alt="Card image cap">

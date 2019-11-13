@@ -68,6 +68,7 @@ var listCategoryApi = new Vue({
       cache: false,
       success: function ( data ) {
         listCategoryApi.category_list = data;
+        
         for (var item in data) {
           //перегляд усіх товарів з категорії, де ID дорівнює <category_id>
           $.ajax({
